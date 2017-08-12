@@ -1,5 +1,7 @@
+package trials;
 
 import javax.sound.midi.*;
+import main.MIDIevent;
 
 public class SimpleMusicApp {
 
@@ -27,7 +29,18 @@ public class SimpleMusicApp {
             MidiEvent noteA = new MidiEvent(a, 2);
             track.add(noteA);
 
-            ShortMessage b = new ShortMessage();
+            ShortMessage a2 = new ShortMessage();
+            a2.setMessage(128, 1, 44, 100);
+            MidiEvent noteAoff = new MidiEvent(a2, 16);
+            track.add(noteAoff);
+
+            //Trial the new MIDIevent class:
+            MidiEvent noteBon = MIDIevent.makeEvent(144,1,46,100,17);
+            track.add(noteBon);
+            MidiEvent noteBoff = MIDIevent.makeEvent(128,1,46,100,32);
+            track.add(noteBoff);
+
+/*            ShortMessage b = new ShortMessage();
             b.setMessage(144, 2, 46, 100);
             MidiEvent noteB = new MidiEvent(b, 6);
             track.add(noteB);
@@ -45,12 +58,11 @@ public class SimpleMusicApp {
             ShortMessage e = new ShortMessage();
             e.setMessage(144,3,24,100);
             MidiEvent noteE = new MidiEvent(e, 18);
-            track.add(noteE);
+            track.add(noteE);*/
 
-            //Pass the sequence (with its track?) to the sequencer, and use the sequencer to play it.
+            //Pass the sequence (with its track) to the sequencer, and use the sequencer to play it.
             player.setSequence(seq);
             player.start(); //TODO: This is not terminating after playing.
-
         } catch(Exception ex){
             ex.printStackTrace();
         }

@@ -1,4 +1,4 @@
-// Author: Nathaniel Ben. Moody
+package trials;// Author: Nathaniel Ben. Moody
 // Initial Date: 8/9/2017
 // Filename: TwoButtons.java
 // Project: BeatBox

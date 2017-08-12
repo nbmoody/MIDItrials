@@ -1,4 +1,4 @@
-// Author: Nathaniel Ben. Moody
+package trials;// Author: Nathaniel Ben. Moody
 // Initial Date: 8/10/2017
 // Filename: SimpleCircleAnimation.java
 // Project: BeatBox
