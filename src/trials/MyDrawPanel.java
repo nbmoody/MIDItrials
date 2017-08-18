@@ -1,4 +1,4 @@
-// Author: Nathaniel Ben. Moody
+package trials;// Author: Nathaniel Ben. Moody
 // Initial Date: 8/8/2017
 // Filename: MyDrawPanel.java
 // Project: BeatBox
